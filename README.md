@@ -13,7 +13,7 @@
 
 <br />
 
-> **VoomLab** is a lightweight homelab built from an old laptop — turning limited hardware into a useful, documented and reproducible home server.
+> **VoomLab** is a lightweight homelab built from an old laptop, that turns limited hardware into a useful, documented and reproducible home server.
 
 </div>
 
@@ -23,7 +23,7 @@
 
 VoomLab is an experiment in doing more with less.
 
-Instead of starting with powerful hardware, the lab starts with a **modest machine**, a clear purpose and a willingness to understand every layer of the system. The goal is not maximum performance. It is to build something useful while learning how real systems are deployed, connected, maintained and improved.
+Instead of starting with powerful hardware, the lab starts with a **modest machine**, a clear purpose and a willingness to understand every layer of the system. The goal is to build something useful while learning how real systems are deployed, connected, maintained and improved.
 
 <div align="center">
 
