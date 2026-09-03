@@ -77,3 +77,15 @@ sudo ssh-keygen -A
 After restarting the SSH service, remote access worked correctly.
 
 Root SSH access is intentionally not used for normal administration.
+
+## Services
+
+### Uptime Kuma
+
+The first application deployed on VoomLab is Uptime Kuma.
+
+Detailed documentation is available in:
+
+```text
+
+docs/services/uptime-kuma.md
