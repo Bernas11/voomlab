@@ -461,3 +461,29 @@ At the time of this documentation:
 This document describes the known-good baseline.
 
 Any future security or networking changes should be tested and documented here.
+
+## 16. Kernel Hardening
+
+VoomLab applies additional kernel hardening through:
+
+/etc/sysctl.d/99-voomlab-hardening.conf
+
+Current settings:
+
+kernel.kptr_restrict = 2
+kernel.yama.ptrace_scope = 1
+
+These settings reduce exposure of kernel address information and restrict ptrace access between processes.
+
+The configuration has been applied successfully and the server was validated afterwards.
+
+Post-change validation confirmed:
+
+- Network connectivity: OK
+- Server IP: 192.168.1.107
+- SSH service: active
+- SSH configuration test: passed
+- Docker service: active
+- Uptime Kuma: healthy
+- nftables: operational
+- Failed systemd units: 0
