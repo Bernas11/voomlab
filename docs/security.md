@@ -487,3 +487,32 @@ Post-change validation confirmed:
 - Uptime Kuma: healthy
 - nftables: operational
 - Failed systemd units: 0
+--
+## 17. Unused Service Hardening
+
+ModemManager was audited because VoomLab does not use cellular/WWAN connectivity.
+
+The audit confirmed:
+
+- No modem was detected by ModemManager.
+- No modem device nodes were present.
+- No QMI/MBIM modem kernel modules were loaded.
+- No relevant service depended on ModemManager.
+
+ModemManager was therefore disabled:
+
+systemctl disable --now ModemManager.service
+
+The package remains installed intentionally for conservative, reversible hardening.
+
+Post-change validation confirmed:
+
+- Wi-Fi connectivity: OK
+- Server IP: 192.168.1.107
+- SSH: active
+- SSH configuration: valid
+- Docker: active
+- Uptime Kuma: healthy
+- Failed systemd units: 0
+
+Other network-related services were intentionally left unchanged because they participate in the current VoomLab networking and backup architecture.
